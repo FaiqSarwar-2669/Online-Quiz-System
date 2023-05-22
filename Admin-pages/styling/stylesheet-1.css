@@ -1,0 +1,423 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background: #2c3e50;
+    height: 65px;
+    width: 100%;
+}
+
+.name-of-system {
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    position: relative;
+    top: 15px;
+}
+
+.logo,
+.logo1 {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    float: right;
+    margin: 8px 10px 2px 0;
+    padding: 12px;
+    background-color: rgb(60, 60, 161);
+    border-radius: 10px;
+
+}
+
+.logo:hover,
+.logo1:hover {
+    background-color: blue;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 17px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: burlywood
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-left: 20px;
+    padding: 14px 10px 0px 0;
+    right: 0;
+}
+
+#check {
+    display: none;
+}
+
+.dashboard-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.total-course,
+.add-course {
+    padding: 20px;
+    height: 20vh;
+    width: 250px;
+    background-color: blueviolet;
+    margin: 10px;
+}
+
+.total-course label,
+.total-question label,
+.view-course label,
+.add-course {
+    color: white;
+    font-size: 25px;
+}
+
+.fa-book,
+.fa-sharp,
+.fa-plus,
+.fa-eye {
+    color: aquamarine;
+    font-size: 30px;
+    margin: 25px 50px 0px 0px;
+}
+
+.total-question,
+.view-course {
+    padding: 20px;
+    margin: 10px;
+    height: 20vh;
+    width: 250px;
+    background-color: rgb(168, 126, 207);
+}
+
+.view-course,
+.add-course {
+    height: 13vh;
+    cursor: pointer;
+}
+
+.output {
+    position: relative;
+    float: right;
+    color: white;
+    font-size: 20px;
+}
+
+.panels {
+    background-color: #374858;
+    width: 80%;
+    height: auto;
+    position: relative;
+    left: 20vh;
+}
+
+.add-course-panel {
+    padding: 20px;
+}
+
+.add-course-panel label {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 10%;
+}
+
+.view-course-panel,
+.add-course-panel { 
+    display: none;
+}
+
+.delete-question-btn{
+    position: relative;
+    float: right;
+    cursor: pointer;
+    margin: 10px 10px 0px 0px;
+    background-color: rgb(151, 8, 8);
+    color: white;
+    padding: 3px;
+}
+.delete-question-btn:hover {
+    background-color: red;
+}
+.save-course {
+    color: white;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding: 12px;
+    background-color: rgb(60, 60, 161);
+    border-radius: 10px;
+    margin-left: 35%;
+    width: 30%;
+}
+
+.save-course:hover {
+    background-color: blue;
+}
+
+.fields {
+    width: 65%;
+    height: 5vh;
+    margin: 15px;
+    position: relative;
+    left: 20%;
+}
+
+.view-course-panel label {
+    color: white;
+    position: relative;
+    left: 45%;
+    font-size: 25px;
+    border-bottom: 2px solid white;
+}
+
+
+#course-tablel,#record-tablel {
+    margin-left: 5%;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#course-tablel td,
+#course-tablel th,
+#record-tablel td,
+#record-tablel th {
+    color: white;
+    border: 1px solid #6e7cbb;
+    padding: 8px;
+    text-align: center;
+}
+
+#course-tablel tr:nth-child(even) {
+    background-color: #5a83db;
+}
+#record-tablel tr:nth-child(even) {
+    background-color: #5a83db;
+}
+#record-tablel tr:nth-child(odd) {
+    background-color: #55aed8;
+}
+
+#course-tablel tr:hover {
+    background-color: #1f777a;
+}
+#record-tablel tr:hover {
+    background-color: #1f777a;
+}
+
+#course-tablel th,
+#record-tablel th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #3055bb;
+    color: white;
+}
+
+.question-style {
+    margin-left: 30px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: antiquewhite;
+    width: 90%;
+    margin-bottom: 10px;
+    height: auto;
+
+}
+
+hr {
+    border: none;
+    border-top: 3px solid blue;
+    height: 0;
+    width: 80%;
+    margin: 20px 0px 10px 60px;
+}
+
+.fa-trash {
+    color: rgb(151, 8, 8);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-trash:hover {
+    color: red;
+}
+
+
+/* Css for php index.php file */
+
+.dispaly-quiz{
+    width: 300px;
+    min-height: 10vh;
+    background-color: #614375;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 20px;
+    
+}
+.dispaly-quiz label{
+    position: relative;
+    top: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.fa-square-pen{
+    position: relative;
+    float: right;
+    top: 10px;
+    color: white;
+    font-size: 40px;
+}
+#all-quizes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
+/* css for quiz.php */
+.load-quiz-page
+{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+
+}
+#LoadQuiz{
+    background-color: #4e6197;
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+#LoadQuiz:hover{
+    background-color:#3055bb;
+}
+.Quiz-panel{
+    padding: 15px;
+    margin-top: 10px;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.Quiz-panel hr{
+    width: 90%;
+}
+.question-span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.marks{
+    position: relative;
+    float: right;
+}
+.userdata{
+    display: flex;
+    justify-content: center;
+}
+#submitBtn{
+    margin-top: 10px;
+    position: relative;
+    padding: 4px;
+    font-size: 20px;
+    left: 50%;
+    background-color: #4e6197;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+#submitBtn:hover{
+    background-color:#3055bb;
+}
+
+@media (max-width:621px) {
+    .panels {
+        position: relative;
+        left: 10%;
+    }
+
+    .question-style {
+        margin-left: 15px;
+
+    }
+}
+
+@media (max-width: 452px) {
+    .logo {
+        margin-top: -41px;
+
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 10px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        position: relative;
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .panels {
+        position: relative;
+        left: 10%;
+    }
+
+    .question-style {
+        margin-left: 10px;
+
+    }
+
+    .view-course-panel label {
+        position: relative;
+        left: 30%;
+    }
+}
