@@ -9,7 +9,7 @@ if(isset($_GET['id5']) && $_GET['id5']=='quiz')
     $id=$_POST['questionid'];
     $sql="SELECT * FROM question WHERE Subject_id=$id";
     $result=mysqli_query($connection,$sql);
-    if($result)
+    if(mysqli_num_rows($result)>0)
     {
         while($row=mysqli_fetch_assoc($result))
         {
@@ -33,6 +33,8 @@ if(isset($_GET['id5']) && $_GET['id5']=='quiz')
         <input type="text" id="User-name"><br>
          </div>';
     echo $output;
+    }else{
+        echo "No Question Found!!!";
     }
     
 }
@@ -42,6 +44,7 @@ if(isset($_GET['id6']) && $_GET['id6']=='quiz')
     $selectedOptions=$_POST['selectedOptions'];
     $name=$_POST['name'];
     $sum=0;
+    $total=0;
     $questionCount="";
     $query = "SELECT Question_id, Correct, Marks,Question FROM question WHERE Subject_id = $id";
     $result=mysqli_query($connection,$query);
@@ -60,14 +63,16 @@ if(isset($_GET['id6']) && $_GET['id6']=='quiz')
     else{
         echo "Failed to execute it!";
     }
-    $output='Wrong Questions <br>';
-    while($row=mysqli_fetch_assoc($result))
+    $query30 = "SELECT SUM(Marks) AS Total FROM question WHERE Subject_id= $id";
+    $result30=mysqli_query($connection,$query30);
+    if($result30)
     {
-        $output.=$row['Question']; 
-        $output.='Correct Option: '.$row['Correct'].'<br>'; 
+        while($row=mysqli_fetch_assoc($result30))
+        {
+            $total=$row['Total'];
+        }
     }
-    $output.='<br>';
-    $output.='Marks Obtained: '. $sum;
+    $output="Marks Obtained: ". $sum."/".$total;
     $query3 = "SELECT COUNT(Marks) AS 'total' FROM question WHERE Subject_id = $id";
     $result = mysqli_query($connection, $query3);
     if ($result) {
@@ -78,7 +83,7 @@ if(isset($_GET['id6']) && $_GET['id6']=='quiz')
     VALUES ('$id', '$name', '$sum', '$questionCount')";
     if(mysqli_query($connection, $query1))
     {
-        echo "Saved!!!";
+        $output.= "\nSaved!!!";
     }
     echo $output;
     

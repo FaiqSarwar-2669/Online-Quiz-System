@@ -22,7 +22,7 @@ if(isset($_GET['id']))
         <a href="index.php" class="logo1">Back</a>
     </nav>
     <div class="load-quiz-page">
-        <button id="LoadQuiz" data-id="44">Start Attempt</button>
+        <button id="LoadQuiz" data-id="<?php echo $id; ?>">Start Attempt</button>
     </div>
     <div class="Quiz-panel"></div>
     <button onclick="done(<?php echo $id; ?>)" id="submitBtn">Submit</button>

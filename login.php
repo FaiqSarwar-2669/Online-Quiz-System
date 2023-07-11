@@ -9,6 +9,8 @@
 </head>
 <body>
 <a href="index.php" class="button_for_register">Back</a>
+<label style="color:white;font-size:20px">User Name = Faiq</label><br>
+<label style="color:white;font-size:20px">Password = 123</label>
     <div class="login_form">
         <img src="pic/logo.png" alt="logo pic" class="logo_pic_on_login_form">
         <h1>Login Here</h1>
